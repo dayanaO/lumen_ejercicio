@@ -16,3 +16,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/autores', 'AutorController@getAll');
+$router->post('/autores/new', 'AutorController@create');
